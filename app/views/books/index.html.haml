@@ -1,3 +1,8 @@
+/* %input.search.ui-widget-content.ui-corner-all{:placeholder => "type new title & hit enter"} */
+/* %span.ui-icon.ui-icon-plusthick */
+.new-book-container
+  %button.new.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only add new book
+
 #contentFlow.ContentFlow
   / should be place before flow so that contained images will be loaded first
   .loadIndicator
@@ -24,4 +29,4 @@
       .position
 
 %div{:style => "display:none;"}
-  = render 'form'
+  = render 'forms'
