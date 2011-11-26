@@ -2,10 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 gem 'haml'
 gem 'nokogiri'
 
@@ -38,6 +34,7 @@ end
 
 group :development do
   # Pretty printed test output
+  gem 'sqlite3'
   gem 'guard'
   gem 'guard-livereload'
 end
