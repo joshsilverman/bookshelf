@@ -23,10 +23,10 @@ class Autocompleter
       (text) => 
         $('.amzn-results').html text
         
-        @searchable.find('#book_title')[0].value = $('.amzn-results #result_0 .title a')[0].innerHTML
-        @searchable.find('#book_cover_url')[0].value = $('.amzn-results #result_0 img')[0].src.match(/(^[\w\W]*\/images\/I\/[^\.]*)/)[1] + ".jpg"
-        @searchable.find('#book_author')[0].value = $('.amzn-results #result_0 div.title .ptBrand')[0].innerHTML.replace(/<[^>]*>/g, "").replace(/^by /, "")
-        @searchable.find('#book_isbn')[0].value =  $('.amzn-results #result_0 .title a')[0].href.match(/dp\/([^\/]*)\//)[1]
+#        @searchable.find('#book_title')[0].value = $('.amzn-results #result_0 .title a')[0].innerHTML
+#        @searchable.find('#book_cover_url')[0].value = $('.amzn-results #result_0 img')[0].src.match(/(^[\w\W]*\/images\/I\/[^\.]*)/)[1] + ".jpg"
+#        @searchable.find('#book_author')[0].value = $('.amzn-results #result_0 div.title .ptBrand')[0].innerHTML.replace(/<[^>]*>/g, "").replace(/^by /, "")
+#        @searchable.find('#book_isbn')[0].value =  $('.amzn-results #result_0 .title a')[0].href.match(/dp\/([^\/]*)\//)[1]
     )
 
 class Contentflow
