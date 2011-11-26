@@ -1,4 +1,9 @@
 Bookshelf::Application.routes.draw do
+  resources :books
+  match "books/lookup/:title" => "books#lookup"
+
+  resources :tags
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

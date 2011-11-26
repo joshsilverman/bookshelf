@@ -1,0 +1,51 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background:black !important;
+/*  background: url('black_paper.png') !important;*/
+}
+
+#contentFlow {
+  margin-top:100px;
+}
+
+.item {
+  position:relative;
+  
+  &.active #icons {display:block;}
+  
+  #icons {
+    right:-32px;
+    top:-2px;
+    position: absolute;
+    margin-bottom:-8px;
+    display:none;
+    width:100%;
+    z-index:2;
+
+    li {
+      float:right;
+      clear:both;
+      list-style-type: none;
+      height:16px;
+      width:16px;
+      padding:2px;
+      margin:4px;
+    }
+   
+    img {
+      z-index:1px;
+    }
+  
+  }
+}
+
+input[type=text] {
+  width: 100%;
+}
+
+.amzn-results {
+  display:none;
+}

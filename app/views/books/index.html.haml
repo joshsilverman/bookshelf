@@ -1,0 +1,27 @@
+#contentFlow.ContentFlow
+  / should be place before flow so that contained images will be loaded first
+  .loadIndicator
+    .indicator
+  .flow
+    - @books.each do |book|
+      .item{:book_id => book.id, :book_isbn => book.isbn, :book_author => book.author, :book_cover_url => book.cover_url, :book_title => book.title}
+
+        %ul#icons.ui-widget.ui-helper-clearfix
+          %li.ui-state-default.ui-corner-all
+            = link_to '', book, method: :delete, :class => "ui-icon ui-icon-closethick"
+          %li.ui-state-default.ui-corner-all
+            %span.ui-icon.ui-icon-pencil
+
+        %img.content{:src => book.cover_url}
+        .caption
+          %strong= book.title
+          by 
+          =book.author
+
+  .globalCaption
+  .scrollbar
+    .slider
+      .position
+
+%div{:style => "display:none;"}
+  = render 'form'
