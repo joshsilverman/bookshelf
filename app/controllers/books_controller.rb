@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     @book = Book.first
-    @book ||= Book.create
+    @book ||= Book.new
 
     respond_to do |format|
       format.html # index.html.erb
